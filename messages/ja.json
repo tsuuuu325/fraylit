@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "物語の欠片。静寂のあいだに、意味が宿る。",
+    "loading": "読み込み中…",
+    "error": "問題が発生しました。",
+    "retry": "再試行",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "saving": "保存中…",
+    "delete": "削除",
+    "back": "戻る"
+  },
+  "nav": {
+    "home": "タイムライン",
+    "create": "書く",
+    "login": "ログイン",
+    "signup": "新規登録",
+    "logout": "ログアウト",
+    "profile": "プロフィール",
+    "language": "言語",
+    "notifications": "通知"
+  },
+  "auth": {
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "パスワード",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "または次で続行",
+    "google": "Googleで続行",
+    "callbackFailed": "認証に失敗しました。もう一度お試しください。",
+    "login": {
+      "title": "おかえりなさい",
+      "subtitle": "余白へ、もう一度戻る。",
+      "submit": "ログイン",
+      "submitting": "ログイン中…",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signupLink": "新規登録",
+      "failed": "メールアドレスまたはパスワードが正しくありません。"
+    },
+    "signup": {
+      "title": "Fraylitに参加",
+      "subtitle": "アーカイブに、あなたの痕跡を。",
+      "usernameLabel": "ユーザー名",
+      "usernamePlaceholder": "your_username",
+      "usernameHint": "3〜20文字。英数字とアンダースコアのみ使用できます。",
+      "displayNameLabel": "表示名",
+      "displayNamePlaceholder": "あなたの名前",
+      "submit": "アカウントを作成",
+      "submitting": "作成中…",
+      "haveAccount": "すでにアカウントをお持ちですか？",
+      "loginLink": "ログイン",
+      "usernameTaken": "そのユーザー名はすでに使用されています。",
+      "checkEmail": "受信トレイを確認してメールアドレスを認証し、ログインしてください。",
+      "failed": "アカウントを作成できませんでした。"
+    }
+  },
+  "timeline": {
+    "title": "タイムライン",
+    "subtitle": "あなたの文才を、世界に。",
+    "empty": "まだ物語がありません。",
+    "emptyCta": "最初の一編を書いてみましょう。"
+  },
+  "post": {
+    "modeOpeningClosing": "冒頭と結末",
+    "modePlotTwist": "どんでん返し",
+    "openingLabel": "冒頭",
+    "closingLabel": "結末",
+    "twistLabel": "転換点",
+    "openingPlaceholder": "どのように始まる？",
+    "closingPlaceholder": "どのように終わる？",
+    "twistPlaceholder": "すべてが変わる瞬間…",
+    "by": "作",
+    "like": "いいね",
+    "liked": "いいね済み",
+    "likeCount": "{count, plural, =0 {いいねなし} other {いいね #件}}",
+    "commentCount": "{count, plural, =0 {コメントなし} other {コメント #件}}",
+    "loginToLike": "いいねするにはログインしてください。",
+    "loginToComment": "会話に参加するにはログインしてください。",
+    "commentsTitle": "コメント",
+    "commentPlaceholder": "コメントを追加…",
+    "postComment": "投稿",
+    "posting": "投稿中…",
+    "noComments": "まだコメントはありません。",
+    "deletePost": "投稿を削除",
+    "deleteConfirm": "この投稿を削除しますか？元に戻せません。",
+    "deleteComment": "コメントを削除"
+  },
+  "create": {
+    "title": "何かを書く",
+    "subtitle": "入口か、出口か、それとも転換点か。",
+    "chooseMode": "モードを選択",
+    "openingClosingDesc": "すべての断片に、前がある。後がある。",
+    "plotTwistDesc": "すべてが傾く、その一行。",
+    "charCount": "{count}/{max} 文字",
+    "sentenceCount": "{count}/{max} 文",
+    "submit": "公開",
+    "submitting": "公開中…",
+    "success": "公開しました！",
+    "errorEmpty": "まず何か書いてください。",
+    "errorTooManySentences": "最大 {max} 文までです。",
+    "errorTooLong": "最大 {max} 文字までです。",
+    "loginRequired": "執筆するにはログインが必要です。"
+  },
+  "profile": {
+    "postsTitle": "投稿",
+    "noPosts": "まだ投稿がありません。",
+    "notFound": "プロフィールが見つかりません。",
+    "memberSince": "{date} に参加",
+    "editProfile": "プロフィールを編集",
+    "edit": {
+      "title": "プロフィールを編集",
+      "displayNameLabel": "表示名",
+      "bioLabel": "自己紹介",
+      "bioPlaceholder": "読者にあなたのことを伝えましょう…",
+      "avatarUrlLabel": "アバターURL",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "変更を保存",
+      "saved": "プロフィールを更新しました。"
+    }
+  },
+  "notifications": {
+    "title": "通知",
+    "subtitle": "あなたの文字に触れた人たち。",
+    "empty": "今は静寂 — やがて、ここに響きが集まる。",
+    "loading": "読み込み中…",
+    "liked": "{name} があなたの断片にいいねしました",
+    "commented": "{name} があなたの断片にコメントしました",
+    "viewAll": "すべて見る"
+  },
+  "validation": {
+    "usernameInvalid": "ユーザー名は3〜20文字、英数字とアンダースコアのみ使用できます。",
+    "required": "この項目は必須です。"
+  }
+}

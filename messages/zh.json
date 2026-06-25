@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "故事的碎片。寂静之间，意义栖居。",
+    "loading": "加载中…",
+    "error": "出了点问题。",
+    "retry": "重试",
+    "cancel": "取消",
+    "save": "保存",
+    "saving": "保存中…",
+    "delete": "删除",
+    "back": "返回"
+  },
+  "nav": {
+    "home": "时间线",
+    "create": "写作",
+    "login": "登录",
+    "signup": "注册",
+    "logout": "退出登录",
+    "profile": "个人资料",
+    "language": "语言",
+    "notifications": "通知"
+  },
+  "auth": {
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "或使用以下方式继续",
+    "google": "使用 Google 继续",
+    "callbackFailed": "认证失败，请重试。",
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录以继续写作。",
+      "submit": "登录",
+      "submitting": "登录中…",
+      "noAccount": "还没有账号？",
+      "signupLink": "注册",
+      "failed": "邮箱或密码错误。"
+    },
+    "signup": {
+      "title": "加入 Fraylit",
+      "subtitle": "创建账号开始写作。",
+      "usernameLabel": "用户名",
+      "usernamePlaceholder": "your_username",
+      "usernameHint": "3–20 个字符，仅限字母、数字和下划线。",
+      "displayNameLabel": "显示名称",
+      "displayNamePlaceholder": "你的名字",
+      "submit": "创建账号",
+      "submitting": "创建中…",
+      "haveAccount": "已经有账号了？",
+      "loginLink": "登录",
+      "usernameTaken": "该用户名已被使用。",
+      "checkEmail": "请查收邮件确认你的邮箱，然后登录。",
+      "failed": "无法创建你的账号。"
+    }
+  },
+  "timeline": {
+    "title": "时间线",
+    "subtitle": "你的文才，献给世界。",
+    "empty": "还没有故事。",
+    "emptyCta": "成为第一个写下故事的人。"
+  },
+  "post": {
+    "modeOpeningClosing": "开头与结尾",
+    "modePlotTwist": "情节反转",
+    "openingLabel": "开头",
+    "closingLabel": "结尾",
+    "twistLabel": "转折",
+    "openingPlaceholder": "故事如何开始？",
+    "closingPlaceholder": "故事如何结束？",
+    "twistPlaceholder": "一切改变的瞬间…",
+    "by": "作者",
+    "like": "赞",
+    "liked": "已赞",
+    "likeCount": "{count, plural, =0 {暂无点赞} other {# 个赞}}",
+    "commentCount": "{count, plural, =0 {暂无评论} other {# 条评论}}",
+    "loginToLike": "登录后即可点赞。",
+    "loginToComment": "登录后即可参与讨论。",
+    "commentsTitle": "评论",
+    "commentPlaceholder": "添加评论…",
+    "postComment": "发布",
+    "posting": "发布中…",
+    "noComments": "还没有评论。",
+    "deletePost": "删除帖子",
+    "deleteConfirm": "删除这条帖子？此操作无法撤销。",
+    "deleteComment": "删除评论"
+  },
+  "create": {
+    "title": "写点什么",
+    "subtitle": "选择你的门槛——入口、出口，或转折。",
+    "chooseMode": "选择模式",
+    "openingClosingDesc": "每一片段，都有之前——与之后。",
+    "plotTwistDesc": "一切倾斜的那一行。",
+    "charCount": "{count}/{max} 字符",
+    "sentenceCount": "{count}/{max} 句",
+    "submit": "发布",
+    "submitting": "发布中…",
+    "success": "已发布！",
+    "errorEmpty": "请先写点内容。",
+    "errorTooManySentences": "最多 {max} 句。",
+    "errorTooLong": "最多 {max} 个字符。",
+    "loginRequired": "写作需要先登录。"
+  },
+  "profile": {
+    "postsTitle": "帖子",
+    "noPosts": "还没有帖子。",
+    "notFound": "未找到该资料。",
+    "memberSince": "{date} 加入",
+    "editProfile": "编辑资料",
+    "edit": {
+      "title": "编辑资料",
+      "displayNameLabel": "显示名称",
+      "bioLabel": "简介",
+      "bioPlaceholder": "向读者介绍你自己…",
+      "avatarUrlLabel": "头像 URL",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "保存更改",
+      "saved": "资料已更新。"
+    }
+  },
+  "notifications": {
+    "title": "通知",
+    "subtitle": "谁触碰了你的文字。",
+    "empty": "此刻尚静——你的回响将汇聚于此。",
+    "loading": "加载中…",
+    "liked": "{name} 赞了你的片段",
+    "commented": "{name} 在你的片段下留言",
+    "viewAll": "查看全部"
+  },
+  "validation": {
+    "usernameInvalid": "用户名必须为 3–20 个字符：仅限字母、数字和下划线。",
+    "required": "此字段为必填项。"
+  }
+}

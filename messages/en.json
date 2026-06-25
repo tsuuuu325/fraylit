@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "Stories in shards. Meaning in the hush between.",
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving…",
+    "delete": "Delete",
+    "back": "Back"
+  },
+  "nav": {
+    "home": "Timeline",
+    "create": "Write",
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "profile": "Profile",
+    "language": "Language",
+    "notifications": "Notifications"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "or continue with",
+    "google": "Continue with Google",
+    "callbackFailed": "Authentication failed. Please try again.",
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Return to the margins.",
+      "submit": "Log in",
+      "submitting": "Logging in…",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up",
+      "failed": "Invalid email or password."
+    },
+    "signup": {
+      "title": "Join Fraylit",
+      "subtitle": "Leave a mark in the archive.",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "your_username",
+      "usernameHint": "3–20 characters, letters, numbers and underscores only.",
+      "displayNameLabel": "Display name",
+      "displayNamePlaceholder": "Your name",
+      "submit": "Create account",
+      "submitting": "Creating account…",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log in",
+      "usernameTaken": "That username is already taken.",
+      "checkEmail": "Check your inbox to confirm your email, then log in.",
+      "failed": "Could not create your account."
+    }
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "Your craft, into the world.",
+    "empty": "No stories yet.",
+    "emptyCta": "Be the first to write one."
+  },
+  "post": {
+    "modeOpeningClosing": "Opening & Closing",
+    "modePlotTwist": "Plot Twist",
+    "openingLabel": "Opening",
+    "closingLabel": "Closing",
+    "twistLabel": "The Twist",
+    "openingPlaceholder": "How does it begin?",
+    "closingPlaceholder": "How does it end?",
+    "twistPlaceholder": "The moment everything changes…",
+    "by": "by",
+    "like": "Like",
+    "liked": "Liked",
+    "likeCount": "{count, plural, =0 {No likes} one {# like} other {# likes}}",
+    "commentCount": "{count, plural, =0 {No comments} one {# comment} other {# comments}}",
+    "loginToLike": "Log in to like posts.",
+    "loginToComment": "Log in to join the conversation.",
+    "commentsTitle": "Comments",
+    "commentPlaceholder": "Add a comment…",
+    "postComment": "Post",
+    "posting": "Posting…",
+    "noComments": "No comments yet.",
+    "deletePost": "Delete post",
+    "deleteConfirm": "Delete this post? This cannot be undone.",
+    "deleteComment": "Delete comment"
+  },
+  "create": {
+    "title": "Write something",
+    "subtitle": "Pick your threshold — entry, exit, or the turn.",
+    "chooseMode": "Choose a mode",
+    "openingClosingDesc": "Every fragment holds a before — and an after.",
+    "plotTwistDesc": "The line where everything tilts.",
+    "charCount": "{count}/{max} characters",
+    "sentenceCount": "{count}/{max} sentences",
+    "submit": "Publish",
+    "submitting": "Publishing…",
+    "success": "Published!",
+    "errorEmpty": "Please write something first.",
+    "errorTooManySentences": "Maximum {max} sentences allowed.",
+    "errorTooLong": "Maximum {max} characters allowed.",
+    "loginRequired": "You need to log in to write."
+  },
+  "profile": {
+    "postsTitle": "Posts",
+    "noPosts": "No posts yet.",
+    "notFound": "Profile not found.",
+    "memberSince": "Joined {date}",
+    "editProfile": "Edit profile",
+    "edit": {
+      "title": "Edit profile",
+      "displayNameLabel": "Display name",
+      "bioLabel": "Bio",
+      "bioPlaceholder": "Tell readers about yourself…",
+      "avatarUrlLabel": "Avatar URL",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "Save changes",
+      "saved": "Profile updated."
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "subtitle": "Who touched your words.",
+    "empty": "Silence for now — your echoes will gather here.",
+    "loading": "Listening…",
+    "liked": "{name} liked your fragment",
+    "commented": "{name} left a note on your fragment",
+    "viewAll": "View all"
+  },
+  "validation": {
+    "usernameInvalid": "Username must be 3–20 characters: letters, numbers and underscores only.",
+    "required": "This field is required."
+  }
+}

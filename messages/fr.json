@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "Fragments d'histoires. Du sens dans le silence entre les mots.",
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue.",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "delete": "Supprimer",
+    "back": "Retour"
+  },
+  "nav": {
+    "home": "Fil",
+    "create": "Écrire",
+    "login": "Connexion",
+    "signup": "Inscription",
+    "logout": "Déconnexion",
+    "profile": "Profil",
+    "language": "Langue",
+    "notifications": "Notifications"
+  },
+  "auth": {
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "vous@exemple.com",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "ou continuer avec",
+    "google": "Continuer avec Google",
+    "callbackFailed": "Échec de l'authentification. Veuillez réessayer.",
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous pour continuer à écrire.",
+      "submit": "Se connecter",
+      "submitting": "Connexion…",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signupLink": "Inscrivez-vous",
+      "failed": "E-mail ou mot de passe invalide."
+    },
+    "signup": {
+      "title": "Rejoignez Fraylit",
+      "subtitle": "Créez un compte pour commencer à écrire.",
+      "usernameLabel": "Nom d'utilisateur",
+      "usernamePlaceholder": "votre_pseudo",
+      "usernameHint": "3 à 20 caractères, lettres, chiffres et tirets bas uniquement.",
+      "displayNameLabel": "Nom affiché",
+      "displayNamePlaceholder": "Votre nom",
+      "submit": "Créer un compte",
+      "submitting": "Création du compte…",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "loginLink": "Se connecter",
+      "usernameTaken": "Ce nom d'utilisateur est déjà pris.",
+      "checkEmail": "Vérifiez votre boîte mail pour confirmer votre adresse, puis connectez-vous.",
+      "failed": "Impossible de créer votre compte."
+    }
+  },
+  "timeline": {
+    "title": "Fil",
+    "subtitle": "Votre talent, au monde.",
+    "empty": "Aucune histoire pour l'instant.",
+    "emptyCta": "Soyez le premier à en écrire une."
+  },
+  "post": {
+    "modeOpeningClosing": "Début et Fin",
+    "modePlotTwist": "Coup de Théâtre",
+    "openingLabel": "Début",
+    "closingLabel": "Fin",
+    "twistLabel": "Le Tournant",
+    "openingPlaceholder": "Comment cela commence-t-il ?",
+    "closingPlaceholder": "Comment cela se termine-t-il ?",
+    "twistPlaceholder": "L'instant où tout bascule…",
+    "by": "par",
+    "like": "J'aime",
+    "liked": "Aimé",
+    "likeCount": "{count, plural, =0 {Aucun j'aime} one {# j'aime} other {# j'aime}}",
+    "commentCount": "{count, plural, =0 {Aucun commentaire} one {# commentaire} other {# commentaires}}",
+    "loginToLike": "Connectez-vous pour aimer.",
+    "loginToComment": "Connectez-vous pour participer à la conversation.",
+    "commentsTitle": "Commentaires",
+    "commentPlaceholder": "Ajouter un commentaire…",
+    "postComment": "Publier",
+    "posting": "Publication…",
+    "noComments": "Aucun commentaire pour l'instant.",
+    "deletePost": "Supprimer la publication",
+    "deleteConfirm": "Supprimer cette publication ? Action irréversible.",
+    "deleteComment": "Supprimer le commentaire"
+  },
+  "create": {
+    "title": "Écrivez quelque chose",
+    "subtitle": "Choisissez votre seuil — entrée, sortie ou bascule.",
+    "chooseMode": "Choisissez un mode",
+    "openingClosingDesc": "Chaque fragment porte un avant — et un après.",
+    "plotTwistDesc": "La ligne où tout penche.",
+    "charCount": "{count}/{max} caractères",
+    "sentenceCount": "{count}/{max} phrases",
+    "submit": "Publier",
+    "submitting": "Publication…",
+    "success": "Publié !",
+    "errorEmpty": "Veuillez d'abord écrire quelque chose.",
+    "errorTooManySentences": "Maximum {max} phrases autorisées.",
+    "errorTooLong": "Maximum {max} caractères autorisés.",
+    "loginRequired": "Vous devez vous connecter pour écrire."
+  },
+  "profile": {
+    "postsTitle": "Publications",
+    "noPosts": "Aucune publication pour l'instant.",
+    "notFound": "Profil introuvable.",
+    "memberSince": "Inscrit le {date}",
+    "editProfile": "Modifier le profil",
+    "edit": {
+      "title": "Modifier le profil",
+      "displayNameLabel": "Nom affiché",
+      "bioLabel": "Bio",
+      "bioPlaceholder": "Parlez de vous aux lecteurs…",
+      "avatarUrlLabel": "URL de l'avatar",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "Enregistrer les modifications",
+      "saved": "Profil mis à jour."
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "subtitle": "Qui a touché vos mots.",
+    "empty": "Le silence pour l'instant — vos échos s'y rassembleront.",
+    "loading": "À l'écoute…",
+    "liked": "{name} a aimé votre fragment",
+    "commented": "{name} a laissé une note sur votre fragment",
+    "viewAll": "Tout voir"
+  },
+  "validation": {
+    "usernameInvalid": "Le nom d'utilisateur doit comporter 3 à 20 caractères : lettres, chiffres et tirets bas uniquement.",
+    "required": "Ce champ est obligatoire."
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "Geschichten in Scherben. Sinn in der Stille dazwischen.",
+    "loading": "Wird geladen…",
+    "error": "Etwas ist schiefgelaufen.",
+    "retry": "Erneut versuchen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "saving": "Wird gespeichert…",
+    "delete": "Löschen",
+    "back": "Zurück"
+  },
+  "nav": {
+    "home": "Verlauf",
+    "create": "Schreiben",
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "logout": "Abmelden",
+    "profile": "Profil",
+    "language": "Sprache",
+    "notifications": "Benachrichtigungen"
+  },
+  "auth": {
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "du@beispiel.com",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "oder fortfahren mit",
+    "google": "Mit Google fortfahren",
+    "callbackFailed": "Authentifizierung fehlgeschlagen. Bitte erneut versuchen.",
+    "login": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melde dich an, um weiterzuschreiben.",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung…",
+      "noAccount": "Noch kein Konto?",
+      "signupLink": "Registrieren",
+      "failed": "E-Mail oder Passwort ungültig."
+    },
+    "signup": {
+      "title": "Tritt Fraylit bei",
+      "subtitle": "Erstelle ein Konto, um mit dem Schreiben zu beginnen.",
+      "usernameLabel": "Benutzername",
+      "usernamePlaceholder": "dein_name",
+      "usernameHint": "3–20 Zeichen, nur Buchstaben, Zahlen und Unterstriche.",
+      "displayNameLabel": "Anzeigename",
+      "displayNamePlaceholder": "Dein Name",
+      "submit": "Konto erstellen",
+      "submitting": "Konto wird erstellt…",
+      "haveAccount": "Hast du bereits ein Konto?",
+      "loginLink": "Anmelden",
+      "usernameTaken": "Dieser Benutzername ist bereits vergeben.",
+      "checkEmail": "Bestätige deine E-Mail über dein Postfach und melde dich dann an.",
+      "failed": "Konto konnte nicht erstellt werden."
+    }
+  },
+  "timeline": {
+    "title": "Verlauf",
+    "subtitle": "Dein Talent, hinaus in die Welt.",
+    "empty": "Noch keine Geschichten.",
+    "emptyCta": "Schreibe die erste."
+  },
+  "post": {
+    "modeOpeningClosing": "Anfang & Ende",
+    "modePlotTwist": "Wendung",
+    "openingLabel": "Anfang",
+    "closingLabel": "Ende",
+    "twistLabel": "Die Wendung",
+    "openingPlaceholder": "Wie beginnt es?",
+    "closingPlaceholder": "Wie endet es?",
+    "twistPlaceholder": "Der Moment, in dem sich alles ändert…",
+    "by": "von",
+    "like": "Gefällt mir",
+    "liked": "Gefällt mir",
+    "likeCount": "{count, plural, =0 {Keine Likes} one {# Like} other {# Likes}}",
+    "commentCount": "{count, plural, =0 {Keine Kommentare} one {# Kommentar} other {# Kommentare}}",
+    "loginToLike": "Melde dich an, um Beiträge zu liken.",
+    "loginToComment": "Melde dich an, um mitzureden.",
+    "commentsTitle": "Kommentare",
+    "commentPlaceholder": "Kommentar hinzufügen…",
+    "postComment": "Senden",
+    "posting": "Wird gesendet…",
+    "noComments": "Noch keine Kommentare.",
+    "deletePost": "Beitrag löschen",
+    "deleteConfirm": "Diesen Beitrag löschen? Das kann nicht rückgängig gemacht werden.",
+    "deleteComment": "Kommentar löschen"
+  },
+  "create": {
+    "title": "Schreib etwas",
+    "subtitle": "Wähle deine Schwelle — Eingang, Ausgang oder die Wendung.",
+    "chooseMode": "Modus wählen",
+    "openingClosingDesc": "Jedes Fragment trägt ein Davor — und ein Danach.",
+    "plotTwistDesc": "Die Zeile, in der alles kippt.",
+    "charCount": "{count}/{max} Zeichen",
+    "sentenceCount": "{count}/{max} Sätze",
+    "submit": "Veröffentlichen",
+    "submitting": "Wird veröffentlicht…",
+    "success": "Veröffentlicht!",
+    "errorEmpty": "Bitte schreibe zuerst etwas.",
+    "errorTooManySentences": "Maximal {max} Sätze erlaubt.",
+    "errorTooLong": "Maximal {max} Zeichen erlaubt.",
+    "loginRequired": "Du musst dich anmelden, um zu schreiben."
+  },
+  "profile": {
+    "postsTitle": "Beiträge",
+    "noPosts": "Noch keine Beiträge.",
+    "notFound": "Profil nicht gefunden.",
+    "memberSince": "Beigetreten am {date}",
+    "editProfile": "Profil bearbeiten",
+    "edit": {
+      "title": "Profil bearbeiten",
+      "displayNameLabel": "Anzeigename",
+      "bioLabel": "Bio",
+      "bioPlaceholder": "Erzähl den Lesern von dir…",
+      "avatarUrlLabel": "Avatar-URL",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "Änderungen speichern",
+      "saved": "Profil aktualisiert."
+    }
+  },
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "subtitle": "Wer deine Worte berührt hat.",
+    "empty": "Erst Stille — deine Echos sammeln sich hier.",
+    "loading": "Lauschen…",
+    "liked": "{name} mochte dein Fragment",
+    "commented": "{name} hinterließ eine Notiz zu deinem Fragment",
+    "viewAll": "Alle anzeigen"
+  },
+  "validation": {
+    "usernameInvalid": "Der Benutzername muss 3–20 Zeichen lang sein: nur Buchstaben, Zahlen und Unterstriche.",
+    "required": "Dieses Feld ist erforderlich."
+  }
+}

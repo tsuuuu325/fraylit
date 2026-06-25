@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "Fragmentos de historias. Significado en el silencio entre medias.",
+    "loading": "Cargando…",
+    "error": "Algo salió mal.",
+    "retry": "Reintentar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando…",
+    "delete": "Eliminar",
+    "back": "Atrás"
+  },
+  "nav": {
+    "home": "Cronología",
+    "create": "Escribir",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "logout": "Cerrar sesión",
+    "profile": "Perfil",
+    "language": "Idioma",
+    "notifications": "Notificaciones"
+  },
+  "auth": {
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "o continúa con",
+    "google": "Continuar con Google",
+    "callbackFailed": "Error de autenticación. Inténtalo de nuevo.",
+    "login": {
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Inicia sesión para seguir escribiendo.",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión…",
+      "noAccount": "¿No tienes una cuenta?",
+      "signupLink": "Regístrate",
+      "failed": "Correo o contraseña incorrectos."
+    },
+    "signup": {
+      "title": "Únete a Fraylit",
+      "subtitle": "Crea una cuenta para empezar a escribir.",
+      "usernameLabel": "Nombre de usuario",
+      "usernamePlaceholder": "tu_usuario",
+      "usernameHint": "3–20 caracteres, solo letras, números y guiones bajos.",
+      "displayNameLabel": "Nombre visible",
+      "displayNamePlaceholder": "Tu nombre",
+      "submit": "Crear cuenta",
+      "submitting": "Creando cuenta…",
+      "haveAccount": "¿Ya tienes una cuenta?",
+      "loginLink": "Iniciar sesión",
+      "usernameTaken": "Ese nombre de usuario ya está en uso.",
+      "checkEmail": "Revisa tu correo para confirmar tu cuenta y luego inicia sesión.",
+      "failed": "No se pudo crear tu cuenta."
+    }
+  },
+  "timeline": {
+    "title": "Cronología",
+    "subtitle": "Tu talento, al mundo.",
+    "empty": "Aún no hay historias.",
+    "emptyCta": "Sé el primero en escribir una."
+  },
+  "post": {
+    "modeOpeningClosing": "Inicio y Final",
+    "modePlotTwist": "Giro Argumental",
+    "openingLabel": "Inicio",
+    "closingLabel": "Final",
+    "twistLabel": "El Giro",
+    "openingPlaceholder": "¿Cómo empieza?",
+    "closingPlaceholder": "¿Cómo termina?",
+    "twistPlaceholder": "El momento en que todo cambia…",
+    "by": "por",
+    "like": "Me gusta",
+    "liked": "Te gusta",
+    "likeCount": "{count, plural, =0 {Sin me gusta} one {# me gusta} other {# me gusta}}",
+    "commentCount": "{count, plural, =0 {Sin comentarios} one {# comentario} other {# comentarios}}",
+    "loginToLike": "Inicia sesión para dar me gusta.",
+    "loginToComment": "Inicia sesión para unirte a la conversación.",
+    "commentsTitle": "Comentarios",
+    "commentPlaceholder": "Añade un comentario…",
+    "postComment": "Publicar",
+    "posting": "Publicando…",
+    "noComments": "Aún no hay comentarios.",
+    "deletePost": "Eliminar publicación",
+    "deleteConfirm": "¿Eliminar esta publicación? No se puede deshacer.",
+    "deleteComment": "Eliminar comentario"
+  },
+  "create": {
+    "title": "Escribe algo",
+    "subtitle": "Elige tu umbral — entrada, salida o el giro.",
+    "chooseMode": "Elige un modo",
+    "openingClosingDesc": "Cada fragmento guarda un antes — y un después.",
+    "plotTwistDesc": "La línea donde todo se inclina.",
+    "charCount": "{count}/{max} caracteres",
+    "sentenceCount": "{count}/{max} oraciones",
+    "submit": "Publicar",
+    "submitting": "Publicando…",
+    "success": "¡Publicado!",
+    "errorEmpty": "Por favor, escribe algo primero.",
+    "errorTooManySentences": "Máximo {max} oraciones permitidas.",
+    "errorTooLong": "Máximo {max} caracteres permitidos.",
+    "loginRequired": "Necesitas iniciar sesión para escribir."
+  },
+  "profile": {
+    "postsTitle": "Publicaciones",
+    "noPosts": "Aún no hay publicaciones.",
+    "notFound": "Perfil no encontrado.",
+    "memberSince": "Se unió el {date}",
+    "editProfile": "Editar perfil",
+    "edit": {
+      "title": "Editar perfil",
+      "displayNameLabel": "Nombre visible",
+      "bioLabel": "Biografía",
+      "bioPlaceholder": "Cuéntales a los lectores sobre ti…",
+      "avatarUrlLabel": "URL del avatar",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "Guardar cambios",
+      "saved": "Perfil actualizado."
+    }
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "subtitle": "Quién tocó tus palabras.",
+    "empty": "Silencio por ahora — tus ecos se reunirán aquí.",
+    "loading": "Escuchando…",
+    "liked": "A {name} le gustó tu fragmento",
+    "commented": "{name} dejó una nota en tu fragmento",
+    "viewAll": "Ver todo"
+  },
+  "validation": {
+    "usernameInvalid": "El nombre de usuario debe tener 3–20 caracteres: solo letras, números y guiones bajos.",
+    "required": "Este campo es obligatorio."
+  }
+}

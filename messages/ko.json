@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Fraylit",
+    "tagline": "이야기의 파편. 그 사이의 고요 속에, 의미가 깃든다.",
+    "loading": "불러오는 중…",
+    "error": "문제가 발생했습니다.",
+    "retry": "다시 시도",
+    "cancel": "취소",
+    "save": "저장",
+    "saving": "저장 중…",
+    "delete": "삭제",
+    "back": "뒤로"
+  },
+  "nav": {
+    "home": "타임라인",
+    "create": "쓰기",
+    "login": "로그인",
+    "signup": "회원가입",
+    "logout": "로그아웃",
+    "profile": "프로필",
+    "language": "언어",
+    "notifications": "알림"
+  },
+  "auth": {
+    "emailLabel": "이메일",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "비밀번호",
+    "passwordPlaceholder": "••••••••",
+    "orContinueWith": "또는 다음으로 계속",
+    "google": "Google로 계속하기",
+    "callbackFailed": "인증에 실패했습니다. 다시 시도해 주세요.",
+    "login": {
+      "title": "다시 오신 것을 환영합니다",
+      "subtitle": "로그인하여 계속 작성하세요.",
+      "submit": "로그인",
+      "submitting": "로그인 중…",
+      "noAccount": "계정이 없으신가요?",
+      "signupLink": "회원가입",
+      "failed": "이메일 또는 비밀번호가 올바르지 않습니다."
+    },
+    "signup": {
+      "title": "Fraylit에 참여하기",
+      "subtitle": "계정을 만들어 글쓰기를 시작하세요.",
+      "usernameLabel": "사용자 이름",
+      "usernamePlaceholder": "your_username",
+      "usernameHint": "3~20자, 영문자, 숫자, 밑줄만 사용할 수 있습니다.",
+      "displayNameLabel": "표시 이름",
+      "displayNamePlaceholder": "이름",
+      "submit": "계정 만들기",
+      "submitting": "계정 생성 중…",
+      "haveAccount": "이미 계정이 있으신가요?",
+      "loginLink": "로그인",
+      "usernameTaken": "이미 사용 중인 사용자 이름입니다.",
+      "checkEmail": "받은 편지함에서 이메일을 인증한 후 로그인하세요.",
+      "failed": "계정을 만들 수 없습니다."
+    }
+  },
+  "timeline": {
+    "title": "타임라인",
+    "subtitle": "당신의 재능을, 세상에.",
+    "empty": "아직 이야기가 없습니다.",
+    "emptyCta": "첫 번째 이야기를 써보세요."
+  },
+  "post": {
+    "modeOpeningClosing": "처음과 끝",
+    "modePlotTwist": "반전",
+    "openingLabel": "처음",
+    "closingLabel": "끝",
+    "twistLabel": "반전",
+    "openingPlaceholder": "어떻게 시작되나요?",
+    "closingPlaceholder": "어떻게 끝나나요?",
+    "twistPlaceholder": "모든 것이 바뀌는 순간…",
+    "by": "작성:",
+    "like": "좋아요",
+    "liked": "좋아요함",
+    "likeCount": "{count, plural, =0 {좋아요 없음} other {좋아요 #개}}",
+    "commentCount": "{count, plural, =0 {댓글 없음} other {댓글 #개}}",
+    "loginToLike": "좋아요를 누르려면 로그인하세요.",
+    "loginToComment": "대화에 참여하려면 로그인하세요.",
+    "commentsTitle": "댓글",
+    "commentPlaceholder": "댓글 추가…",
+    "postComment": "게시",
+    "posting": "게시 중…",
+    "noComments": "아직 댓글이 없습니다.",
+    "deletePost": "게시물 삭제",
+    "deleteConfirm": "이 게시물을 삭제하시겠습니까? 되돌릴 수 없습니다.",
+    "deleteComment": "댓글 삭제"
+  },
+  "create": {
+    "title": "무언가를 써보세요",
+    "subtitle": "문턱을 고르세요 — 입구, 출구, 혹은 전환.",
+    "chooseMode": "모드 선택",
+    "openingClosingDesc": "모든 단편에는 전이 있다. 후가 있다.",
+    "plotTwistDesc": "모든 것이 기울어지는 그 한 줄.",
+    "charCount": "{count}/{max}자",
+    "sentenceCount": "{count}/{max}문장",
+    "submit": "게시",
+    "submitting": "게시 중…",
+    "success": "게시되었습니다!",
+    "errorEmpty": "먼저 무언가를 작성해 주세요.",
+    "errorTooManySentences": "최대 {max}문장까지 가능합니다.",
+    "errorTooLong": "최대 {max}자까지 가능합니다.",
+    "loginRequired": "글을 쓰려면 로그인이 필요합니다."
+  },
+  "profile": {
+    "postsTitle": "게시물",
+    "noPosts": "아직 게시물이 없습니다.",
+    "notFound": "프로필을 찾을 수 없습니다.",
+    "memberSince": "{date} 가입",
+    "editProfile": "프로필 편집",
+    "edit": {
+      "title": "프로필 편집",
+      "displayNameLabel": "표시 이름",
+      "bioLabel": "소개",
+      "bioPlaceholder": "독자에게 자신을 소개하세요…",
+      "avatarUrlLabel": "아바타 URL",
+      "avatarUrlPlaceholder": "https://…",
+      "save": "변경사항 저장",
+      "saved": "프로필이 업데이트되었습니다."
+    }
+  },
+  "notifications": {
+    "title": "알림",
+    "subtitle": "당신의 글에 닿은 사람들.",
+    "empty": "지금은 고요함 — 메아리가 이곳에 모일 것입니다.",
+    "loading": "불러오는 중…",
+    "liked": "{name}님이 회원님의 단편에 좋아요를 눌렀습니다",
+    "commented": "{name}님이 회원님의 단편에 댓글을 남겼습니다",
+    "viewAll": "모두 보기"
+  },
+  "validation": {
+    "usernameInvalid": "사용자 이름은 3~20자여야 하며 영문자, 숫자, 밑줄만 사용할 수 있습니다.",
+    "required": "필수 입력 항목입니다."
+  }
+}
