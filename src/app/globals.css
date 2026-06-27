@@ -84,7 +84,7 @@
   .gold-frame::after {
     content: '';
     position: absolute;
-    inset: -28%;
+    inset: -14%;
     background-image: url('/frames/gold-frame.png');
     background-size: 100% 100%;
     pointer-events: none;
