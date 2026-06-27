@@ -16,13 +16,18 @@ const sizes = {
 export default function Avatar({
   name,
   url,
-  size = 'md'
+  size = 'md',
+  isPaid = false
 }: {
   name: string;
   url?: string | null;
   size?: keyof typeof sizes;
+  isPaid?: boolean;
 }) {
   const px = sizes[size];
+  const frameClass = isPaid
+    ? 'ring-2 ring-amber-400 ring-offset-2 ring-offset-ink-950'
+    : 'ring-1 ring-ink-700';
 
   if (url) {
     return (
@@ -31,7 +36,7 @@ export default function Avatar({
         alt={name}
         width={px}
         height={px}
-        className="rounded-full object-cover ring-1 ring-ink-700"
+        className={`rounded-full object-cover ${frameClass}`}
         style={{ width: px, height: px }}
       />
     );
@@ -39,7 +44,7 @@ export default function Avatar({
 
   return (
     <span
-      className="flex shrink-0 items-center justify-center rounded-full bg-ink-700 font-sans font-semibold text-parchment-muted ring-1 ring-ink-600"
+      className={`flex shrink-0 items-center justify-center rounded-full bg-ink-700 font-sans font-semibold text-parchment-muted ${frameClass}`}
       style={{ width: px, height: px, fontSize: px * 0.38 }}
       aria-hidden
     >

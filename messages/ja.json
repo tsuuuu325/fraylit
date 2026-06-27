@@ -52,7 +52,12 @@
       "loginLink": "ログイン",
       "usernameTaken": "そのユーザー名はすでに使用されています。",
       "checkEmail": "受信トレイを確認してメールアドレスを認証し、ログインしてください。",
-      "failed": "アカウントを作成できませんでした。"
+      "failed": "アカウントを作成できませんでした。",
+      "emailTaken": "このメールアドレスはすでに登録されています。ログインをお試しください。",
+      "redirectNotAllowed": "リダイレクト URL が未設定です。Supabase の Redirect URLs にこのサイトを追加してください。",
+      "weakPassword": "パスワードは6文字以上にしてください。",
+      "rateLimit": "試行回数が多すぎます。数分待ってから再度お試しください。",
+      "emailDisabled": "メール登録が無効です。Supabase → Authentication → Providers → Email で有効にしてください。"
     }
   },
   "timeline": {
@@ -73,6 +78,7 @@
     "by": "作",
     "like": "いいね",
     "liked": "いいね済み",
+    "views": "閲覧数",
     "likeCount": "{count, plural, =0 {いいねなし} other {いいね #件}}",
     "commentCount": "{count, plural, =0 {コメントなし} other {コメント #件}}",
     "loginToLike": "いいねするにはログインしてください。",
@@ -131,5 +137,17 @@
   "validation": {
     "usernameInvalid": "ユーザー名は3〜20文字、英数字とアンダースコアのみ使用できます。",
     "required": "この項目は必須です。"
+  },
+  "subscription": {
+    "upgradeTitle": "ゴールドにアップグレード",
+    "priceLabel": "月額 $4",
+    "featureUnlimitedPosts": "投稿数無制限",
+    "featureGoldName": "ゴールドの表示名",
+    "featureGoldFrame": "豪華なアバターフレーム",
+    "limitReachedTitle": "無料枠の上限に達しました",
+    "limitReachedBody": "無料アカウントは24時間ごとに{count}件まで投稿できます。ゴールドにアップグレードすると投稿が無制限になります。",
+    "upgradeButton": "ゴールドにアップグレード",
+    "manageSubscription": "サブスクリプションを管理",
+    "alreadySubscribed": "すでにゴールド会員です。ありがとうございます！"
   }
 }

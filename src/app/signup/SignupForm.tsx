@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { getSignupErrorKey } from '@/lib/auth-errors';
 import { createClient } from '@/lib/supabase/client';
 import { isValidUsername } from '@/lib/validation';
 
@@ -45,14 +46,11 @@ export default function SignupForm() {
       return;
     }
 
-    const siteUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ?? window.location.origin;
-
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        emailRedirectTo: `${siteUrl}/auth/callback`,
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
         data: {
           username,
           display_name: displayName || username
@@ -61,7 +59,7 @@ export default function SignupForm() {
     });
 
     if (error) {
-      setError(t('signup.failed'));
+      setError(t(`signup.${getSignupErrorKey(error)}`));
       setLoading(false);
       return;
     }

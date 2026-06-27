@@ -13,12 +13,14 @@ export interface PostAuthor {
   username: string;
   display_name: string;
   avatar_url: string | null;
+  is_paid: boolean;
 }
 
 export interface PostWithMeta extends Post {
   author: PostAuthor;
   like_count: number;
   comment_count: number;
+  view_count: number;
   liked_by_me: boolean;
 }
 

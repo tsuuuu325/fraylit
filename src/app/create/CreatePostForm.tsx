@@ -51,10 +51,23 @@ function LineField({
   );
 }
 
-export default function CreatePostForm({ userId }: { userId: string }) {
+export default function CreatePostForm({
+  userId,
+  isPaid,
+  recentPostCount,
+  freeLimit
+}: {
+  userId: string;
+  isPaid: boolean;
+  recentPostCount: number;
+  freeLimit: number;
+}) {
   const t = useTranslations('create');
   const tp = useTranslations('post');
+  const ts = useTranslations('subscription');
   const router = useRouter();
+  const [upgrading, setUpgrading] = useState(false);
+  const limitReached = !isPaid && recentPostCount >= freeLimit;
 
   const [mode, setMode] = useState<PostMode>('opening_closing');
   const [opening, setOpening] = useState('');
@@ -126,6 +139,38 @@ export default function CreatePostForm({ userId }: { userId: string }) {
 
     router.push('/');
     router.refresh();
+  }
+
+  async function upgrade() {
+    setUpgrading(true);
+    try {
+      const res = await fetch('/api/stripe/checkout', { method: 'POST' });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+    } finally {
+      setUpgrading(false);
+    }
+  }
+
+  if (limitReached) {
+    return (
+      <div className="card space-y-4 p-7 text-center">
+        <h2 className="font-serif text-2xl font-bold text-amber-400">
+          {ts('limitReachedTitle')}
+        </h2>
+        <p className="text-parchment-muted">
+          {ts('limitReachedBody', { count: freeLimit })}
+        </p>
+        <button
+          type="button"
+          onClick={upgrade}
+          disabled={upgrading}
+          className="btn-primary px-8"
+        >
+          {ts('upgradeButton')}
+        </button>
+      </div>
+    );
   }
 
   return (

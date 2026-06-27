@@ -9,6 +9,7 @@ import type { PostAuthor, PostWithMeta } from '@/lib/types';
 import Avatar from './Avatar';
 import LikeButton from './LikeButton';
 import CommentSection from './CommentSection';
+import ViewCounter from './ViewCounter';
 
 function PostBody({ post }: { post: PostWithMeta }) {
   const t = useTranslations('post');
@@ -131,9 +132,14 @@ export default function PostCard({
             name={post.author.display_name}
             url={post.author.avatar_url}
             size="sm"
+            isPaid={post.author.is_paid}
           />
           <span className="min-w-0">
-            <span className="block truncate text-sm font-medium text-parchment group-hover:text-accent">
+            <span
+              className={`block truncate text-sm font-medium group-hover:text-accent ${
+                post.author.is_paid ? 'text-amber-400' : 'text-parchment'
+              }`}
+            >
               {post.author.display_name}
             </span>
             <span className="block truncate text-xs text-parchment-dim">
@@ -147,6 +153,7 @@ export default function PostCard({
         </Link>
 
         <div className="flex items-center gap-5">
+          <ViewCounter postId={post.id} initialCount={post.view_count} />
           <LikeButton
             postId={post.id}
             initialCount={post.like_count}

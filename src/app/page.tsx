@@ -18,7 +18,8 @@ export default async function TimelinePage() {
         id: profile.id,
         username: profile.username,
         display_name: profile.display_name,
-        avatar_url: profile.avatar_url
+        avatar_url: profile.avatar_url,
+        is_paid: profile.subscription_status === 'active'
       }
     : null;
 

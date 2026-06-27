@@ -55,7 +55,8 @@ export default function CommentSection({
             id: '',
             username: 'unknown',
             display_name: 'Unknown',
-            avatar_url: null
+            avatar_url: null,
+            is_paid: false
           }
       } as CommentWithAuthor;
     });

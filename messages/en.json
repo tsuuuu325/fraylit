@@ -52,7 +52,12 @@
       "loginLink": "Log in",
       "usernameTaken": "That username is already taken.",
       "checkEmail": "Check your inbox to confirm your email, then log in.",
-      "failed": "Could not create your account."
+      "failed": "Could not create your account.",
+      "emailTaken": "An account with this email already exists. Try logging in.",
+      "redirectNotAllowed": "Sign-up redirect URL is not configured. Add this site to Supabase Redirect URLs.",
+      "weakPassword": "Password must be at least 6 characters.",
+      "rateLimit": "Too many attempts. Please wait a few minutes and try again.",
+      "emailDisabled": "Email sign-up is disabled in Supabase. Enable it under Authentication → Providers → Email."
     }
   },
   "timeline": {
@@ -73,6 +78,7 @@
     "by": "by",
     "like": "Like",
     "liked": "Liked",
+    "views": "Views",
     "likeCount": "{count, plural, =0 {No likes} one {# like} other {# likes}}",
     "commentCount": "{count, plural, =0 {No comments} one {# comment} other {# comments}}",
     "loginToLike": "Log in to like posts.",
@@ -131,5 +137,17 @@
   "validation": {
     "usernameInvalid": "Username must be 3–20 characters: letters, numbers and underscores only.",
     "required": "This field is required."
+  },
+  "subscription": {
+    "upgradeTitle": "Upgrade to Gold",
+    "priceLabel": "$4 / month",
+    "featureUnlimitedPosts": "Unlimited posts",
+    "featureGoldName": "Gold display name",
+    "featureGoldFrame": "Gilded avatar frame",
+    "limitReachedTitle": "Free limit reached",
+    "limitReachedBody": "Free accounts can publish {count} posts every 24 hours. Upgrade to Gold for unlimited posts.",
+    "upgradeButton": "Upgrade to Gold",
+    "manageSubscription": "Manage subscription",
+    "alreadySubscribed": "You're already a Gold member. Thank you!"
   }
 }

@@ -11,11 +11,9 @@ export default function GoogleButton() {
   async function signIn() {
     setLoading(true);
     const supabase = createClient();
-    const siteUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ?? window.location.origin;
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${siteUrl}/auth/callback` }
+      options: { redirectTo: `${window.location.origin}/auth/callback` }
     });
     if (error) setLoading(false);
   }

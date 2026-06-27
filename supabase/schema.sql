@@ -31,6 +31,21 @@ create table if not exists public.profiles (
   constraint display_name_length check (char_length(display_name) between 1 and 50)
 );
 
+-- Subscription fields (added after initial release; safe for existing tables).
+alter table public.profiles add column if not exists stripe_customer_id text;
+alter table public.profiles add column if not exists stripe_subscription_id text;
+alter table public.profiles add column if not exists subscription_status text not null default 'free';
+do $$
+begin
+  if not exists (
+    select 1 from pg_constraint where conname = 'subscription_status_valid'
+  ) then
+    alter table public.profiles
+      add constraint subscription_status_valid
+      check (subscription_status in ('free', 'active', 'canceled', 'past_due'));
+  end if;
+end$$;
+
 create table if not exists public.posts (
   id            uuid primary key default gen_random_uuid(),
   user_id       uuid not null references public.profiles (id) on delete cascade,
@@ -53,6 +68,9 @@ create table if not exists public.posts (
        and closing_lines is null)
   )
 );
+
+-- View counter (added after initial release; safe for existing tables).
+alter table public.posts add column if not exists views integer not null default 0;
 
 create table if not exists public.likes (
   id         uuid primary key default gen_random_uuid(),
@@ -245,6 +263,62 @@ drop trigger if exists on_comment_notify on public.comments;
 create trigger on_comment_notify
   after insert on public.comments
   for each row execute function public.notify_on_comment();
+
+-- ============================================================================
+-- View counter: increment a post's view count. SECURITY DEFINER so any
+-- visitor (including anonymous) can bump the counter despite the
+-- "update your own posts only" RLS policy.
+-- ============================================================================
+create or replace function public.increment_post_views(p_id uuid)
+returns void
+language sql
+security definer
+set search_path = public
+as $$
+  update public.posts set views = views + 1 where id = p_id;
+$$;
+
+grant execute on function public.increment_post_views(uuid) to anon, authenticated;
+
+-- ============================================================================
+-- Free-plan rate limit: non-subscribers may publish at most 2 posts per
+-- rolling 24 hours. This is server-side defense-in-depth; the client also
+-- checks the count before showing the form, but a direct API call must not
+-- be able to bypass the limit.
+-- ============================================================================
+create or replace function public.enforce_post_rate_limit()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  status text;
+  recent_count integer;
+begin
+  select subscription_status into status from public.profiles where id = new.user_id;
+
+  if status = 'active' then
+    return new;
+  end if;
+
+  select count(*) into recent_count
+  from public.posts
+  where user_id = new.user_id
+    and created_at > now() - interval '24 hours';
+
+  if recent_count >= 2 then
+    raise exception 'free_post_limit_reached';
+  end if;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists on_post_rate_limit on public.posts;
+create trigger on_post_rate_limit
+  before insert on public.posts
+  for each row execute function public.enforce_post_rate_limit();
 
 -- ============================================================================
 -- Signup trigger: auto-create a profile row for every new auth user.

@@ -9,11 +9,19 @@ import type {
 type DB = SupabaseClient;
 
 const POST_SELECT = `
-  id, user_id, mode, opening_lines, closing_lines, twist_lines, created_at,
-  author:profiles!posts_user_id_fkey ( id, username, display_name, avatar_url ),
+  id, user_id, mode, opening_lines, closing_lines, twist_lines, views, created_at,
+  author:profiles!posts_user_id_fkey ( id, username, display_name, avatar_url, subscription_status ),
   likes:likes ( count ),
   comments:comments ( count )
 `;
+
+type RawAuthor = {
+  id: string;
+  username: string;
+  display_name: string;
+  avatar_url: string | null;
+  subscription_status?: string | null;
+};
 
 type RawPost = {
   id: string;
@@ -22,8 +30,9 @@ type RawPost = {
   opening_lines: string | null;
   closing_lines: string | null;
   twist_lines: string | null;
+  views: number | null;
   created_at: string;
-  author: PostWithMeta['author'] | PostWithMeta['author'][] | null;
+  author: RawAuthor | RawAuthor[] | null;
   likes: { count: number }[] | null;
   comments: { count: number }[] | null;
 };
@@ -36,14 +45,22 @@ function normalizeAuthor(
   author: RawPost['author']
 ): PostWithMeta['author'] {
   const a = Array.isArray(author) ? author[0] : author;
-  return (
-    a ?? {
+  if (!a) {
+    return {
       id: '',
       username: 'unknown',
       display_name: 'Unknown',
-      avatar_url: null
-    }
-  );
+      avatar_url: null,
+      is_paid: false
+    };
+  }
+  return {
+    id: a.id,
+    username: a.username,
+    display_name: a.display_name,
+    avatar_url: a.avatar_url,
+    is_paid: a.subscription_status === 'active'
+  };
 }
 
 async function attachLikedByMe(
@@ -69,10 +86,12 @@ function toPostWithMeta(raw: RawPost, likedIds: Set<string>): PostWithMeta {
     opening_lines: raw.opening_lines,
     closing_lines: raw.closing_lines,
     twist_lines: raw.twist_lines,
+    views: raw.views ?? 0,
     created_at: raw.created_at,
     author: normalizeAuthor(raw.author),
     like_count: firstCount(raw.likes),
     comment_count: firstCount(raw.comments),
+    view_count: raw.views ?? 0,
     liked_by_me: likedIds.has(raw.id)
   };
 }
@@ -106,6 +125,21 @@ export async function getProfileByUsername(
 
   if (error) throw error;
   return data;
+}
+
+export async function getRecentPostCount(
+  supabase: DB,
+  userId: string
+): Promise<number> {
+  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const { count, error } = await supabase
+    .from('posts')
+    .select('id', { count: 'exact', head: true })
+    .eq('user_id', userId)
+    .gte('created_at', since);
+
+  if (error) throw error;
+  return count ?? 0;
 }
 
 export async function getPostsByUser(
@@ -144,20 +178,29 @@ export async function getComments(
     const a = Array.isArray(
       (c as unknown as { author: unknown }).author
     )
-      ? (c as unknown as { author: CommentWithAuthor['author'][] }).author[0]
-      : (c as unknown as { author: CommentWithAuthor['author'] }).author;
+      ? (c as unknown as { author: RawAuthor[] }).author[0]
+      : (c as unknown as { author: RawAuthor }).author;
     return {
       id: c.id,
       user_id: c.user_id,
       post_id: c.post_id,
       content: c.content,
       created_at: c.created_at,
-      author: a ?? {
-        id: '',
-        username: 'unknown',
-        display_name: 'Unknown',
-        avatar_url: null
-      }
+      author: a
+        ? {
+            id: a.id,
+            username: a.username,
+            display_name: a.display_name,
+            avatar_url: a.avatar_url,
+            is_paid: false
+          }
+        : {
+            id: '',
+            username: 'unknown',
+            display_name: 'Unknown',
+            avatar_url: null,
+            is_paid: false
+          }
     };
   });
 }
@@ -168,17 +211,25 @@ const NOTIFICATION_SELECT = `
 `;
 
 function normalizeNotificationActor(
-  actor: NotificationWithActor['actor'] | NotificationWithActor['actor'][] | null
+  actor: RawAuthor | RawAuthor[] | null
 ): NotificationWithActor['actor'] {
   const a = Array.isArray(actor) ? actor[0] : actor;
-  return (
-    a ?? {
+  if (!a) {
+    return {
       id: '',
       username: 'unknown',
       display_name: 'Unknown',
-      avatar_url: null
-    }
-  );
+      avatar_url: null,
+      is_paid: false
+    };
+  }
+  return {
+    id: a.id,
+    username: a.username,
+    display_name: a.display_name,
+    avatar_url: a.avatar_url,
+    is_paid: false
+  };
 }
 
 export async function getNotifications(
@@ -197,7 +248,7 @@ export async function getNotifications(
 
   return (data ?? []).map((row) => {
     const n = row as unknown as NotificationWithActor & {
-      actor: NotificationWithActor['actor'] | NotificationWithActor['actor'][] | null;
+      actor: RawAuthor | RawAuthor[] | null;
     };
     return {
       id: n.id,

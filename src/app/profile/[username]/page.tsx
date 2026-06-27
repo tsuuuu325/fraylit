@@ -43,21 +43,32 @@ export default async function ProfilePage({
         id: me.id,
         username: me.username,
         display_name: me.display_name,
-        avatar_url: me.avatar_url
+        avatar_url: me.avatar_url,
+        is_paid: me.subscription_status === 'active'
       }
     : null;
   const isOwner = me?.id === profile.id;
+  const isPaid = profile.subscription_status === 'active';
 
   const posts = await getPostsByUser(supabase, profile.id, viewer?.id ?? null);
 
   return (
     <div className="animate-fade-in">
       <header className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
-        <Avatar name={profile.display_name} url={profile.avatar_url} size="lg" />
+        <Avatar
+          name={profile.display_name}
+          url={profile.avatar_url}
+          size="lg"
+          isPaid={isPaid}
+        />
         <div className="min-w-0 flex-1">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <h1 className="font-serif text-3xl font-bold">
+              <h1
+                className={`font-serif text-3xl font-bold ${
+                  isPaid ? 'text-amber-400' : ''
+                }`}
+              >
                 {profile.display_name}
               </h1>
               <p className="text-parchment-dim">@{profile.username}</p>

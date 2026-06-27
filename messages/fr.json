@@ -52,7 +52,12 @@
       "loginLink": "Se connecter",
       "usernameTaken": "Ce nom d'utilisateur est déjà pris.",
       "checkEmail": "Vérifiez votre boîte mail pour confirmer votre adresse, puis connectez-vous.",
-      "failed": "Impossible de créer votre compte."
+      "failed": "Impossible de créer votre compte.",
+      "emailTaken": "Un compte existe déjà avec cet e-mail. Essayez de vous connecter.",
+      "redirectNotAllowed": "URL de redirection non configurée. Ajoutez ce site dans Supabase Redirect URLs.",
+      "weakPassword": "Le mot de passe doit contenir au moins 6 caractères.",
+      "rateLimit": "Trop de tentatives. Attendez quelques minutes et réessayez.",
+      "emailDisabled": "L'inscription par e-mail est désactivée. Activez-la dans Authentication → Providers → Email."
     }
   },
   "timeline": {
@@ -73,6 +78,7 @@
     "by": "par",
     "like": "J'aime",
     "liked": "Aimé",
+    "views": "Vues",
     "likeCount": "{count, plural, =0 {Aucun j'aime} one {# j'aime} other {# j'aime}}",
     "commentCount": "{count, plural, =0 {Aucun commentaire} one {# commentaire} other {# commentaires}}",
     "loginToLike": "Connectez-vous pour aimer.",
@@ -131,5 +137,17 @@
   "validation": {
     "usernameInvalid": "Le nom d'utilisateur doit comporter 3 à 20 caractères : lettres, chiffres et tirets bas uniquement.",
     "required": "Ce champ est obligatoire."
+  },
+  "subscription": {
+    "upgradeTitle": "Passer à Gold",
+    "priceLabel": "4 $ / mois",
+    "featureUnlimitedPosts": "Publications illimitées",
+    "featureGoldName": "Nom d'affichage doré",
+    "featureGoldFrame": "Cadre d'avatar doré",
+    "limitReachedTitle": "Limite gratuite atteinte",
+    "limitReachedBody": "Les comptes gratuits peuvent publier {count} fois toutes les 24 heures. Passez à Gold pour des publications illimitées.",
+    "upgradeButton": "Passer à Gold",
+    "manageSubscription": "Gérer l'abonnement",
+    "alreadySubscribed": "Vous êtes déjà membre Gold. Merci !"
   }
 }

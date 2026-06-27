@@ -1,5 +1,6 @@
 export type PostMode = 'opening_closing' | 'plot_twist';
 export type NotificationType = 'like' | 'comment';
+export type SubscriptionStatus = 'free' | 'active' | 'canceled' | 'past_due';
 
 export type Database = {
   public: {
@@ -12,6 +13,9 @@ export type Database = {
           avatar_url: string | null;
           bio: string | null;
           created_at: string;
+          stripe_customer_id: string | null;
+          stripe_subscription_id: string | null;
+          subscription_status: SubscriptionStatus;
         };
         Insert: {
           id: string;
@@ -20,6 +24,9 @@ export type Database = {
           avatar_url?: string | null;
           bio?: string | null;
           created_at?: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          subscription_status?: SubscriptionStatus;
         };
         Update: {
           id?: string;
@@ -28,6 +35,9 @@ export type Database = {
           avatar_url?: string | null;
           bio?: string | null;
           created_at?: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          subscription_status?: SubscriptionStatus;
         };
         Relationships: [];
       };
@@ -39,6 +49,7 @@ export type Database = {
           opening_lines: string | null;
           closing_lines: string | null;
           twist_lines: string | null;
+          views: number;
           created_at: string;
         };
         Insert: {
@@ -48,6 +59,7 @@ export type Database = {
           opening_lines?: string | null;
           closing_lines?: string | null;
           twist_lines?: string | null;
+          views?: number;
           created_at?: string;
         };
         Update: {
@@ -57,6 +69,7 @@ export type Database = {
           opening_lines?: string | null;
           closing_lines?: string | null;
           twist_lines?: string | null;
+          views?: number;
           created_at?: string;
         };
         Relationships: [
@@ -211,7 +224,10 @@ export type Database = {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
+      increment_post_views: {
+        Args: { p_id: string };
+        Returns: undefined;
+      };
     };
   };
 };

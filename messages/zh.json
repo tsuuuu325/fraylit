@@ -52,7 +52,12 @@
       "loginLink": "登录",
       "usernameTaken": "该用户名已被使用。",
       "checkEmail": "请查收邮件确认你的邮箱，然后登录。",
-      "failed": "无法创建你的账号。"
+      "failed": "无法创建你的账号。",
+      "emailTaken": "该邮箱已注册。请尝试登录。",
+      "redirectNotAllowed": "未配置注册重定向 URL。请在 Supabase Redirect URLs 中添加本站。",
+      "weakPassword": "密码至少需要 6 个字符。",
+      "rateLimit": "尝试次数过多。请稍等几分钟后重试。",
+      "emailDisabled": "邮箱注册已禁用。请在 Supabase → Authentication → Providers → Email 中启用。"
     }
   },
   "timeline": {
@@ -73,6 +78,7 @@
     "by": "作者",
     "like": "赞",
     "liked": "已赞",
+    "views": "浏览量",
     "likeCount": "{count, plural, =0 {暂无点赞} other {# 个赞}}",
     "commentCount": "{count, plural, =0 {暂无评论} other {# 条评论}}",
     "loginToLike": "登录后即可点赞。",
@@ -131,5 +137,17 @@
   "validation": {
     "usernameInvalid": "用户名必须为 3–20 个字符：仅限字母、数字和下划线。",
     "required": "此字段为必填项。"
+  },
+  "subscription": {
+    "upgradeTitle": "升级到黄金会员",
+    "priceLabel": "$4 / 月",
+    "featureUnlimitedPosts": "无限发帖",
+    "featureGoldName": "金色显示名称",
+    "featureGoldFrame": "华丽头像边框",
+    "limitReachedTitle": "已达免费限额",
+    "limitReachedBody": "免费账户每24小时可发布{count}篇帖子。升级到黄金会员可无限发帖。",
+    "upgradeButton": "升级到黄金会员",
+    "manageSubscription": "管理订阅",
+    "alreadySubscribed": "您已经是黄金会员。感谢支持！"
   }
 }
