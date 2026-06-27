@@ -14,7 +14,7 @@ export default async function UpgradePage() {
   return (
     <div className="animate-fade-in mx-auto max-w-lg">
       <div className="card space-y-6 p-8 text-center">
-        <h1 className="font-serif text-3xl font-bold text-amber-400">
+        <h1 className="gold-text font-serif text-3xl font-bold">
           {t('upgradeTitle')}
         </h1>
         <p className="text-2xl font-semibold text-parchment">{t('priceLabel')}</p>

@@ -25,30 +25,32 @@ export default function Avatar({
   isPaid?: boolean;
 }) {
   const px = sizes[size];
-  const frameClass = isPaid
-    ? 'ring-2 ring-amber-400 ring-offset-2 ring-offset-ink-950'
-    : 'ring-1 ring-ink-700';
+  const ringClass = isPaid ? '' : 'ring-1 ring-ink-700';
 
-  if (url) {
-    return (
-      <Image
-        src={url}
-        alt={name}
-        width={px}
-        height={px}
-        className={`rounded-full object-cover ${frameClass}`}
-        style={{ width: px, height: px }}
-      />
-    );
-  }
-
-  return (
+  const inner = url ? (
+    <Image
+      src={url}
+      alt={name}
+      width={px}
+      height={px}
+      className={`rounded-full object-cover ${ringClass}`}
+      style={{ width: px, height: px }}
+    />
+  ) : (
     <span
-      className={`flex shrink-0 items-center justify-center rounded-full bg-ink-700 font-sans font-semibold text-parchment-muted ${frameClass}`}
+      className={`flex shrink-0 items-center justify-center rounded-full bg-ink-700 font-sans font-semibold text-parchment-muted ${ringClass}`}
       style={{ width: px, height: px, fontSize: px * 0.38 }}
       aria-hidden
     >
       {initials(name)}
+    </span>
+  );
+
+  if (!isPaid) return inner;
+
+  return (
+    <span className="gold-frame" style={{ width: px, height: px }}>
+      {inner}
     </span>
   );
 }

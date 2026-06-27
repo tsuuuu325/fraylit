@@ -155,7 +155,7 @@ export default function CreatePostForm({
   if (limitReached) {
     return (
       <div className="card space-y-4 p-7 text-center">
-        <h2 className="font-serif text-2xl font-bold text-amber-400">
+        <h2 className="gold-text font-serif text-2xl font-bold">
           {ts('limitReachedTitle')}
         </h2>
         <p className="text-parchment-muted">

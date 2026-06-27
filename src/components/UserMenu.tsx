@@ -71,7 +71,7 @@ export default function UserMenu({ profile }: { profile: Profile }) {
           <div className="border-b border-ink-800 px-4 py-3">
             <p
               className={`truncate text-sm font-medium ${
-                isPaid ? 'text-amber-400' : 'text-parchment'
+                isPaid ? 'gold-text' : 'text-parchment'
               }`}
             >
               {profile.display_name}

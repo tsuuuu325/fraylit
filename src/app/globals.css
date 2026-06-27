@@ -70,4 +70,23 @@
   .badge {
     @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide;
   }
+
+  .gold-text {
+    color: #f2cb6b;
+    text-shadow: 0 0 6px rgba(242, 203, 107, 0.9), 0 0 14px rgba(242, 203, 107, 0.5);
+  }
+
+  .gold-frame {
+    position: relative;
+    display: inline-block;
+    border-radius: 9999px;
+  }
+  .gold-frame::after {
+    content: '';
+    position: absolute;
+    inset: -28%;
+    background-image: url('/frames/gold-frame.png');
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
 }

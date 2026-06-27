@@ -119,8 +119,12 @@
       "displayNameLabel": "Anzeigename",
       "bioLabel": "Bio",
       "bioPlaceholder": "Erzähl den Lesern von dir…",
-      "avatarUrlLabel": "Avatar-URL",
+      "avatarUrlLabel": "Avatar",
       "avatarUrlPlaceholder": "https://…",
+      "avatarChoose": "Foto auswählen",
+      "avatarInvalidType": "Bitte wähle eine Bilddatei.",
+      "avatarTooLarge": "Das Bild muss kleiner als 5 MB sein.",
+      "avatarUploadFailed": "Das Bild konnte nicht hochgeladen werden. Bitte versuche es erneut.",
       "save": "Änderungen speichern",
       "saved": "Profil aktualisiert."
     }

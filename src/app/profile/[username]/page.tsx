@@ -66,7 +66,7 @@ export default async function ProfilePage({
             <div className="min-w-0">
               <h1
                 className={`font-serif text-3xl font-bold ${
-                  isPaid ? 'text-amber-400' : ''
+                  isPaid ? 'gold-text' : ''
                 }`}
               >
                 {profile.display_name}

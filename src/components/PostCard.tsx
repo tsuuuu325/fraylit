@@ -137,7 +137,7 @@ export default function PostCard({
           <span className="min-w-0">
             <span
               className={`block truncate text-sm font-medium group-hover:text-accent ${
-                post.author.is_paid ? 'text-amber-400' : 'text-parchment'
+                post.author.is_paid ? 'gold-text' : 'text-parchment'
               }`}
             >
               {post.author.display_name}

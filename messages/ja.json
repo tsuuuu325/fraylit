@@ -119,8 +119,12 @@
       "displayNameLabel": "表示名",
       "bioLabel": "自己紹介",
       "bioPlaceholder": "読者にあなたのことを伝えましょう…",
-      "avatarUrlLabel": "アバターURL",
+      "avatarUrlLabel": "アバター",
       "avatarUrlPlaceholder": "https://…",
+      "avatarChoose": "写真を選択",
+      "avatarInvalidType": "画像ファイルを選択してください。",
+      "avatarTooLarge": "画像は5MB以下にしてください。",
+      "avatarUploadFailed": "画像をアップロードできませんでした。もう一度お試しください。",
       "save": "変更を保存",
       "saved": "プロフィールを更新しました。"
     }
